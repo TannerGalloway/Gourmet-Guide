@@ -1,0 +1,8 @@
+.factsText{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+    color: #6c5b37;
+    overflow-wrap: break-word;
+    width: 300px;
+    margin-bottom: 16px; 
+}

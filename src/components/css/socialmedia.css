@@ -1,0 +1,19 @@
+.sociallinks{
+    padding-top: 16px;
+}
+
+.sociallinks > h4{
+    color: #8e0034;
+}
+
+.sociallinks > a{
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px; 
+    color: #6c5b37;
+    padding-bottom: 16px;
+}
+
+.sociallinks > a:hover{
+    color: #8e0034;
+}

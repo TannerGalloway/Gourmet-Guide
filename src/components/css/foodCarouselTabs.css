@@ -1,0 +1,54 @@
+  .text{
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    width: 170px;
+    color: white;
+    height: 80px;
+  }
+
+  .tab1, .tab2, .tab3{
+    background-color: #84AE8F;
+    cursor: pointer;
+  }
+
+  .Tab1Active, .Tab2Active, .Tab3Active{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  }
+
+  .tab1, .Tab1Active{
+    border-radius: 0px 0px 0px 10px;
+  }
+
+  .tab3, .Tab3Active{
+    border-radius: 0px 0px 10px 0px;
+  }
+
+  .tab1 > .thumbnail > img, .tab2 > .thumbnail > img, .tab3 > .thumbnail > img,  .Tab1Active > .thumbnail > img, .Tab2Active > .thumbnail > img, .Tab3Active > .thumbnail > img {
+      width: 30%;
+      padding: 8px 6px;
+  }
+
+  img{
+    vertical-align: top;
+  }
+
+  .title, .TitleActive{
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .Tab1Active, .Tab2Active, .Tab3Active, .TitleActive{
+    background-color: white;
+    cursor: pointer;
+    color: #8e0034;
+  }
+
+  .subtitle, .SubtitleActive{
+    position: relative;
+    bottom: 5px;
+    font-size: 16px;
+  }
+
+  .SubtitleActive{
+    color: #8b8468;
+  }
