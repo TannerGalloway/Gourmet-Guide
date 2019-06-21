@@ -5,7 +5,6 @@ import update from 'immutability-helper';
 import '../../css/siderecipes.css';
 
 class siderecipes extends Component {
-    
     constructor(props){
         super(props)
         this.state={
@@ -28,19 +27,27 @@ class siderecipes extends Component {
                     area: ''
                 }
                 
-            ]
+            ],
+            popRecipesLoaded: false
         }
     };
 
     
 
     componentDidMount()
-    { 
-        this.getmeals();
-        this.timer();
+    { if(!this.state.popRecipesLoaded)
+        {
+            this.getmeals();
+            this.timer();
+        }
+        else{
+            
+            this.timer();
+        }
     };
     
-    getmeals(){
+    getmeals = () =>{
+        this.setState((prevstate) => ({popRecipesLoaded: !prevstate.popRecipesLoaded}));
         for( var i = 0; i < 3; i++)
         {
                 let index = i;
@@ -56,6 +63,7 @@ class siderecipes extends Component {
             clearInterval(); 
             if(moment().format('h:mm:ss a') === '12:00:00 pm')
             {
+                this.setState({popRecipesLoaded: false});
                 this.getmeals();
             }
         }, 1000);

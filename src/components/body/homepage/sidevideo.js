@@ -23,6 +23,7 @@ import '../../css/sidevideo.css';
     render() {
         return (
             <div className = 'homeVideo'>
+                <h4 style={{color: '#8e0034'}}> Cooking Video</h4>
                 <iframe title={this.state.mealName} id="player" type="text/html" width="200" height="175"
                 src={this.state.mealvideo}
                 frameBorder="0"></iframe>

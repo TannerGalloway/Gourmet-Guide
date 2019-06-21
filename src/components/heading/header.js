@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap'
-import './css/header.css';
+import '../css/header.css';
  class header extends Component {
      state={
         query: ''

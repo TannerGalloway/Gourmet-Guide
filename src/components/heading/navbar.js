@@ -1,34 +1,11 @@
 import React, { Component } from 'react';
 import { Navbar, Nav} from 'react-bootstrap';
-import '../components/css/navbar.css';
+import '../css/navbar.css';
 
 class navbar extends Component {
-
-    // state={  
-    //     clickeditem: '',
-    //     classNameActive: '',
-    //     classNameNotActive: ''
-    //  };
-
-    // toggleClass = (event) => {
-    //     // const currentState = this.state.active;
-    //     // this.setState({ active: !currentState });
-    //     this.setState({clickeditem: event.target.text});
-    //     console.log(typeof(this.state.clickeditem));
-    //     console.log(typeof(this.state.clickeditem));
-    //     if(this.state.clickeditem === event.target.text){
-    //         this.setState({classNameActive: 'active'});
-    //     }
-    //     else{
-    //         this.setState({classNameNotActive: ''});
-    //     }
-
-    //     };
-
     render() {
-        
         return (
-            <React.Fragment>
+        <div className='heading'>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -40,11 +17,10 @@ class navbar extends Component {
                         <Nav.Link href="#">Videos</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
-            </Navbar>
-            
-        </React.Fragment>
+            </Navbar>    
+        </div>
         )
     };
-}
+};
 
 export default navbar;

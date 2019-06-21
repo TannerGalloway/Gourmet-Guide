@@ -1,3 +1,7 @@
+.sidepopular{
+    margin-bottom: 25px;
+}
+
 .siderecipe1 > a > img, .siderecipe2 > a > img, .siderecipe3 > a > img{
     width: 23%;
     padding-bottom: 20px;
@@ -12,6 +16,6 @@
     bottom: 6px;
 }
 
-.sidetext:hover{
+.sidetext:hover {
     color: #8e0034;
 }
