@@ -7,64 +7,79 @@ import '../../css/siderecipes.css';
 class siderecipes extends Component {
     constructor(props){
         super(props)
+        // sessionStorage.clear();
+
+        // set state to recipes that are in session storage.
         this.state={
-            featuredMeals: [
+            popRecipes: [
                 {
-                    img:'',
-                    name: '',
-                    area: ''
+                    img: "",
+                    name: "",
+                    area: ""
                 },
 
                 {
-                    img:'',
-                    name: '',
-                    area: ''
+                    img: "",
+                    name: "",
+                    area: ""
                 },
 
                 {
-                    img:'',
-                    name: '',
-                    area: ''
+                    img: "",
+                    name: "",
+                    area: ""
                 }
                 
-            ],
-            popRecipesLoaded: false
+            ]
+        }
+        // set recipes in session storage for persistance across all pages.
+        if(sessionStorage.getItem("popRecipesLoaded") === null)
+        {
+            this.getmeals(null);
+        }
+        else if(sessionStorage.getItem("popRecipesLoaded") === "true"){
+            this.getmeals("true");
         }
     };
 
-    
 
     componentDidMount()
-    { if(!this.state.popRecipesLoaded)
-        {
-            this.getmeals();
-            this.timer();
-        }
-        else{
-            
-            this.timer();
-        }
+    { 
+        this.timer();
     };
     
-    getmeals = () =>{
-        this.setState((prevstate) => ({popRecipesLoaded: !prevstate.popRecipesLoaded}));
+    getmeals = (loadedmealState) =>{
+        console.log(loadedmealState);
         for( var i = 0; i < 3; i++)
         {
-                let index = i;
-                axios.get('https://www.themealdb.com/api/json/v1/1/random.php').then(res =>{
+            let index = i;
+            axios.get('https://www.themealdb.com/api/json/v1/1/random.php').then(res =>{
                 var responce = res.data.meals[0];
-                this.setState({featuredMeals: update(this.state.featuredMeals, {[index]: {$merge: {img: responce.strMealThumb, name: responce.strMeal, area: responce.strArea}}})});
+
+                if(loadedmealState === null || loadedmealState === "false"){
+                    // set recipe in session storage
+                    sessionStorage.setItem("PopularRecipe" + index, JSON.stringify({img: responce.strMealThumb, name: responce.strMeal, area: responce.strArea}));
+
+                    // set recipe in state from session storage
+                    this.setState({popRecipes: update(this.state.popRecipes, {[index]: {$merge: {img: JSON.parse(sessionStorage.getItem("PopularRecipe" + index)).img, name: JSON.parse(sessionStorage.getItem("PopularRecipe" + index)).name, area: JSON.parse(sessionStorage.getItem("PopularRecipe" + index)).area}}})});
+                }
+                else if(loadedmealState === "true"){
+                    // set recipe in state from session storage
+                    this.setState({popRecipes: update(this.state.popRecipes, {[index]: {$merge: {img: JSON.parse(sessionStorage.getItem("PopularRecipe" + index)).img, name: JSON.parse(sessionStorage.getItem("PopularRecipe" + index)).name, area: JSON.parse(sessionStorage.getItem("PopularRecipe" + index)).area}}})});
+                }
+
             });
         }
+        sessionStorage.setItem("popRecipesLoaded", true);
     };
 
+    // sets a timer so that the Popular Recipes will change daily. 
     timer(){
         setInterval(() => { 
             clearInterval(); 
             if(moment().format('h:mm:ss a') === '12:00:00 pm')
             {
-                this.setState({popRecipesLoaded: false});
-                this.getmeals();
+                this.getmeals("false");
             }
         }, 1000);
     };
@@ -75,29 +90,29 @@ class siderecipes extends Component {
                 <h4 style={{color: '#8e0034'}}> Popular Recipes</h4>
                 <div className='siderecipe1'>
                     <a href='#'>
-                        <img src={this.state.featuredMeals[0].img} alt={this.state.featuredMeals[0].name}></img>
+                        <img src={this.state.popRecipes[0].img} alt={this.state.popRecipes[0].name}></img>
                     </a>
                     <a className = 'sidetext' href='#'>
-                        <h6>{this.state.featuredMeals[0].name}</h6>
-                        <p>{'A ' + this.state.featuredMeals[0].area + ' dish'}</p>
+                        <h6>{this.state.popRecipes[0].name}</h6>
+                        <p>{'A ' + this.state.popRecipes[0].area + ' dish'}</p>
                     </a>
             </div>
             <div className='siderecipe2'>
                 <a href='#'>
-                    <img src={this.state.featuredMeals[1].img} alt={this.state.featuredMeals[1].name}></img>
+                    <img src={this.state.popRecipes[1].img} alt={this.state.popRecipes[1].name}></img>
                 </a>
                     <a className = 'sidetext' href='#'>
-                        <h6>{this.state.featuredMeals[1].name}</h6>
-                        <p>{'A ' + this.state.featuredMeals[1].area + ' dish'}</p>
+                        <h6>{this.state.popRecipes[1].name}</h6>
+                        <p>{'A ' + this.state.popRecipes[1].area + ' dish'}</p>
                 </a>
             </div>
             <div className='siderecipe3'>
                 <a href='#'>
-                    <img src={this.state.featuredMeals[2].img} alt={this.state.featuredMeals[2].name}></img>
+                    <img src={this.state.popRecipes[2].img} alt={this.state.popRecipes[2].name}></img>
                 </a>
                 <a className = 'sidetext' href='#'>
-                    <h6>{this.state.featuredMeals[2].name}</h6>
-                    <p>{'A ' + this.state.featuredMeals[2].area + ' dish'}</p>
+                    <h6>{this.state.popRecipes[2].name}</h6>
+                    <p>{'A ' + this.state.popRecipes[2].area + ' dish'}</p>
                 </a>
             </div>
         </div>

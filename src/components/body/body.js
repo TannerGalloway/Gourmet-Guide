@@ -11,18 +11,20 @@ class body extends Component {
         return (
             <Router>
                 <Switch>
-                    <div className='body'>
-                        <div className='left' style={{width: '730px', float: 'left'}}>
-                            <Navbar/>
-                            <Route exact path="/" component={Homebody}/>
+                    <React.Fragment>
+                        <div className='body'>
+                            <div className='left' style={{width: '730px', float: 'left'}}>
+                                <Navbar/>
+                                <Route exact path="/" component={Homebody}/>
+                            </div>
+                            <div className='right' style={{float: 'right', width:'315px'}}>
+                                <Sidevideo/>
+                                <Siderecipes/>
+                                <Sidefacts/>
+                                <Socialmedia/>
+                            </div>
                         </div>
-                        <div className='right' style={{float: 'right', width:'315px'}}>
-                            <Sidevideo/>
-                            <Siderecipes/>
-                            <Sidefacts/>
-                            <Socialmedia/>
-                        </div>
-                    </div>
+                    </React.Fragment>
                 </Switch>
             </Router>
         )
