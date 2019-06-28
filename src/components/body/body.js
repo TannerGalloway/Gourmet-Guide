@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from '../heading/navbar';
-import Sidevideo from './homepage/sidevideo';
-import Siderecipes from './homepage/siderecipes';
-import Sidefacts from './homepage/sidefacts';
-import Socialmedia from './homepage/socialmedia';
-import Homebody from './homepage/homeBody';
+import Sidevideo from '../sidebar/sidevideo';
+import Siderecipes from '../sidebar/siderecipes';
+import Sidefacts from '../sidebar/sidefacts';
+import Socialmedia from '../sidebar/socialmedia';
+import Home from './homepage/homeBody';
+import About from './about/aboutpage';
+
 class body extends Component {
     render() {
         return (
@@ -15,9 +17,10 @@ class body extends Component {
                         <div className='body'>
                             <div className='left' style={{width: '730px', float: 'left'}}>
                                 <Navbar/>
-                                <Route exact path="/" component={Homebody}/>
+                                <Route exact path="/" component={Home}/>
+                                <Route exact path="/about" component={About}/>
                             </div>
-                            <div className='right' style={{float: 'right', width:'315px'}}>
+                            <div className='right' style={{float: 'right', width: '360px'}}>
                                 <Sidevideo/>
                                 <Siderecipes/>
                                 <Sidefacts/>

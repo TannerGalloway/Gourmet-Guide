@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../css/bottomNavTabs.css';
-
 import featuredImg from '../../images/featured.jpg';
 import categoriesImg from '../../images/categories.jpg';
 import videosImg from '../../images/videos.jpg';
 import aboutImg from '../../images/about.jpg';
+
 function bottomNavTabs() {
     return (
         <div className = 'navtabs'>
@@ -35,9 +35,9 @@ function bottomNavTabs() {
                 </li>
                 <li id = 'bottomright'>
                     <h2>
-                        <a href='#'>About</a>
+                        <a href='/about'>About</a>
                     </h2>
-                    <a href='#'>
+                    <a href='/about'>
                         <img src={aboutImg} alt={'About'}></img>
                     </a>
                 </li>

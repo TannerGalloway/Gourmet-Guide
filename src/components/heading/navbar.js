@@ -10,9 +10,9 @@ class navbar extends Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#">Home</Nav.Link>
-                        <Nav.Link href="#">About</Nav.Link>
-                        <Nav.Link href="#">Featured Recipes</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/about">About</Nav.Link>
+                        <Nav.Link href="#">Popular Recipes</Nav.Link>
                         <Nav.Link href="#">Recipe Categories</Nav.Link>
                         <Nav.Link href="#">Videos</Nav.Link>
                 </Nav>

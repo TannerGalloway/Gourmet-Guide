@@ -1,0 +1,17 @@
+.about{
+    background: url(../images/bg-content.jpg);
+}
+
+.aboutcontent{
+    padding: 13px 36px 36px;
+    font-family: "Times New Roman", Times, serif;
+    color: #8e0034;
+}
+
+.aboutcontent > h4{
+    font-weight: bold;
+}
+
+.aboutcontent > p{
+    color: #6c5b37;
+}

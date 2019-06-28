@@ -1,19 +1,19 @@
 .sidepopular{
+    display: inline-block;
     margin-bottom: 25px;
 }
 
 .siderecipe1 > a > img, .siderecipe2 > a > img, .siderecipe3 > a > img{
-    width: 23%;
+    width: 17%;
     padding-bottom: 20px;
 }
 
 .sidetext{
     display: inline-block;
-    overflow-wrap: break-word;
+    font-size: 16px;
     color: #6c5b37;
     padding-left: 10px;
-    position: relative;
-    bottom: 6px;
+    word-break: break-all;
 }
 
 .sidetext:hover {

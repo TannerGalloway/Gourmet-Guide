@@ -5,7 +5,7 @@ import Body from './components/body/body';
 import './App.css';
 function App() {
   return(
-        <Container>
+        <Container style={{padding: '0px'}}>
           <Header/>
           <Body/>
         </Container>

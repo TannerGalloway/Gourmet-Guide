@@ -8,7 +8,7 @@
     text-shadow: 1px 1px 1px #81725c !important;
 }
 
-.nav-link:active{
+.nav-link:hover{
     background: #81725c;
 }
 

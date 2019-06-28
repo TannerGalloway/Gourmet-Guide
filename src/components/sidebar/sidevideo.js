@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import '../../css/sidevideo.css';
+import '../css/sidevideo.css';
 
  class sidevideo extends Component {
      constructor(props){
@@ -11,6 +11,7 @@ import '../../css/sidevideo.css';
          }
      }
 
+        // get youtube url and change url to embed url
      componentDidMount(){
             axios.get('https://www.themealdb.com/api/json/v1/1/random.php').then(res => {
                 var responce = res.data.meals[0];
@@ -20,6 +21,7 @@ import '../../css/sidevideo.css';
                 this.setState({mealName: responce.strMeal, mealvideo: videourl + '/embed/' + videoID});
             });
      }
+     
     render() {
         return (
             <div className = 'homeVideo'>

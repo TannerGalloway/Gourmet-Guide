@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import foodfactsarr from './foodfacts.json';
-import '../../css/sidefacts.css';
+import '../css/sidefacts.css';
 
  class sidefacts extends Component {
 

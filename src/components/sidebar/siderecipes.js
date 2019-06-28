@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import update from 'immutability-helper';
-import '../../css/siderecipes.css';
+import '../css/siderecipes.css';
 
 class siderecipes extends Component {
     constructor(props){
         super(props)
-        // sessionStorage.clear();
 
         // set state to recipes that are in session storage.
         this.state={
@@ -42,14 +41,13 @@ class siderecipes extends Component {
         }
     };
 
-
+    
     componentDidMount()
     { 
         this.timer();
     };
     
     getmeals = (loadedmealState) =>{
-        console.log(loadedmealState);
         for( var i = 0; i < 3; i++)
         {
             let index = i;
@@ -84,7 +82,22 @@ class siderecipes extends Component {
         }, 1000);
     };
 
+    wordWrap(text,boundary) {
+        return text.split("\n").map(function(line) {
+            var pos = 0;
+            return line.split(/\b/).map(function(word) {
+                pos += word.length;
+                if(pos > boundary) {
+                    pos = 0;
+                    return "\n" + word.trimLeft();
+                }
+                return word;
+            }).join("");
+        }).join("\n");
+    }
+    
     render() {
+        console.log(this.wordWrap(this.state.popRecipes[1].name, 20));
         return(
             <div className= 'sidepopular'>
                 <h4 style={{color: '#8e0034'}}> Popular Recipes</h4>
@@ -102,7 +115,7 @@ class siderecipes extends Component {
                     <img src={this.state.popRecipes[1].img} alt={this.state.popRecipes[1].name}></img>
                 </a>
                     <a className = 'sidetext' href='#'>
-                        <h6>{this.state.popRecipes[1].name}</h6>
+                        <h6>{this.wordWrap(this.state.popRecipes[1].name, 10)}</h6>
                         <p>{'A ' + this.state.popRecipes[1].area + ' dish'}</p>
                 </a>
             </div>
