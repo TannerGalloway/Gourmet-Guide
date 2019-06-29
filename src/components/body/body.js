@@ -7,6 +7,7 @@ import Sidefacts from '../sidebar/sidefacts';
 import Socialmedia from '../sidebar/socialmedia';
 import Home from './homepage/homeBody';
 import About from './about/aboutpage';
+import Videos from './videospage/videos';
 
 class body extends Component {
     render() {
@@ -19,9 +20,10 @@ class body extends Component {
                                 <Navbar/>
                                 <Route exact path="/" component={Home}/>
                                 <Route exact path="/about" component={About}/>
+                                <Route exact path="/videos" component={Videos}/>
                             </div>
                             <div className='right' style={{float: 'right', width: '360px'}}>
-                                <Sidevideo/>
+                                <Sidevideo title={'Cooking Video'}/>
                                 <Siderecipes/>
                                 <Sidefacts/>
                                 <Socialmedia/>

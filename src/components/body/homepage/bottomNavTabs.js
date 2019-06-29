@@ -27,9 +27,9 @@ function bottomNavTabs() {
                 </li>
                 <li id = 'bottomleft'>
                     <h2>
-                        <a href='#'>Videos</a>
+                        <a href='/videos'>Videos</a>
                     </h2>
-                    <a href='#'>
+                    <a href='/videos'>
                         <img src={videosImg} alt={'Videos'}></img>
                     </a>
                 </li>

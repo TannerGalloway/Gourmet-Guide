@@ -1,0 +1,13 @@
+.videosContainer{
+    background: url(../images/bg-content.jpg);
+    padding: 13px 36px 36px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: #8e0034;
+}
+
+.videos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
