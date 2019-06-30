@@ -11,10 +11,10 @@ function bottomNavTabs() {
             <ul>
                 <li id = 'topleft'>
                     <h2>
-                        <a href='#'>Featured Recipes</a>
+                        <a href='/popularrecipes'>Popular Recipes</a>
                     </h2>
-                    <a href='#'>
-                        <img src={featuredImg} alt={'Featured Recipes'}></img>
+                    <a href='/popularrecipes'>
+                        <img src={featuredImg} alt={'Popular Recipes'}></img>
                     </a>
                 </li>
                 <li id = 'topright'>

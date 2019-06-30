@@ -11,6 +11,14 @@ class videos extends Component {
                     <Video/>
                     <Video/>
                     <Video/>
+
+                    <Video/>
+                    <Video/>
+                    <Video/>
+
+                    <Video/>
+                    <Video/>
+                    <Video/>
                 </div>
             </div>
         )

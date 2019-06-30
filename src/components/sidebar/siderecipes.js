@@ -31,6 +31,7 @@ class siderecipes extends Component {
                 
             ]
         }
+        
         // set recipes in session storage for persistance across all pages.
         if(sessionStorage.getItem("popRecipesLoaded") === null)
         {
@@ -81,23 +82,8 @@ class siderecipes extends Component {
             }
         }, 1000);
     };
-
-    wordWrap(text,boundary) {
-        return text.split("\n").map(function(line) {
-            var pos = 0;
-            return line.split(/\b/).map(function(word) {
-                pos += word.length;
-                if(pos > boundary) {
-                    pos = 0;
-                    return "\n" + word.trimLeft();
-                }
-                return word;
-            }).join("");
-        }).join("\n");
-    }
     
     render() {
-        console.log(this.wordWrap(this.state.popRecipes[1].name, 20));
         return(
             <div className= 'sidepopular'>
                 <h4 style={{color: '#8e0034'}}> Popular Recipes</h4>
@@ -115,7 +101,7 @@ class siderecipes extends Component {
                     <img src={this.state.popRecipes[1].img} alt={this.state.popRecipes[1].name}></img>
                 </a>
                     <a className = 'sidetext' href='#'>
-                        <h6>{this.wordWrap(this.state.popRecipes[1].name, 10)}</h6>
+                        <h6>{this.state.popRecipes[1].name}</h6>
                         <p>{'A ' + this.state.popRecipes[1].area + ' dish'}</p>
                 </a>
             </div>

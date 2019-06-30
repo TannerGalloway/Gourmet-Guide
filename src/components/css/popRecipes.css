@@ -1,0 +1,29 @@
+.recipesContainer{
+    background: rgb(221, 214, 205);
+    border-radius: 0px 0px 10px 10px;
+    padding: 13px 0px 36px;
+}
+
+.popRecipe0, .popRecipe1, .popRecipe2 {
+    background: url('../images/bg-content.jpg');
+    padding: 13px 36px;
+    margin: 25px 0px;
+}
+
+.Heading{
+    display: flex;
+    font-family: "Times New Roman", Times, serif;
+    color: #8e0034;
+    justify-content: space-between;
+} 
+
+.popRecipe0 > img, .popRecipe1 > img, .popRecipe2 > img{
+    width: 30%;
+    border: 3px solid white;
+}
+
+#ingredientsColLeft0, #ingredientsColLeft1, #ingredientsColLeft2, #ingredientsColRight0, #ingredientsColRight1, #ingredientsColRight2 {
+    display: inline-block;
+    margin-left: 30px; 
+    color: #6c5b37;
+}
