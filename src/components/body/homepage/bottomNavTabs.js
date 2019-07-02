@@ -19,9 +19,9 @@ function bottomNavTabs() {
                 </li>
                 <li id = 'topright'>
                     <h2>
-                        <a href='#'>Recipe Categories</a>
+                        <a href='/categories'>Recipe Categories</a>
                     </h2>
-                    <a href='#'>
+                    <a href='/categories'>
                         <img src={categoriesImg} alt={'Recipe Categories'}></img>
                     </a>
                 </li>

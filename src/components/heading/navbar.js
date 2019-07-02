@@ -14,7 +14,7 @@ class navbar extends Component {
                         <Nav.Link href="/about">About</Nav.Link>
                         <Nav.Link href="/videos">Videos</Nav.Link>
                         <Nav.Link href="/popularrecipes">Popular Recipes</Nav.Link>
-                        <Nav.Link href="#">Recipe Categories</Nav.Link>
+                        <Nav.Link href="/categories">Recipe Categories</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>    

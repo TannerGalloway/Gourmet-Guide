@@ -1,0 +1,19 @@
+.categoryContainer{
+    background: url('../images/bg-content.jpg');
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 13px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.catagory > h4{
+    text-align: center;
+    color: #6c5b37;
+    margin-bottom: 10px;
+}
+
+a:hover .catagory > h4{
+    color: #8e0034;
+}
