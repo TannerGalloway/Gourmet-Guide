@@ -1,10 +1,23 @@
-import React, { Component } from 'react'
-import { InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap'
+import React, { Component } from 'react';
+import { InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap';
 import '../css/header.css';
+
  class header extends Component {
      state={
         query: ''
      };
+
+
+     onChange = (event) =>{
+        this.setState({query: event.target.value});
+    };
+
+    onSubmit = () =>{
+        sessionStorage.setItem('searchTerm', this.state.query);
+        this.setState({query: ''});
+        window.location.href = "/results";
+    };
+
 
     render() {
 
@@ -24,15 +37,6 @@ import '../css/header.css';
             </div>
         )
     }
-
-    onChange = (event) =>{
-        this.setState({query: event.target.value});
-    };
-
-    onSubmit = (event) =>{
-        event.preventDefault();
-        this.setState({query: ''});
-    };
 }
 
 export default header;

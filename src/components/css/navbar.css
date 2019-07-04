@@ -10,6 +10,7 @@
 
 .nav-link:hover{
     background: #81725c;
+    border-radius: 25px;
 }
 
 .bg-dark{

@@ -10,6 +10,7 @@
 
 .sidetext{
     display: inline-block;
+    width: 80%;
     font-size: 16px;
     color: #6c5b37;
     padding-left: 10px;

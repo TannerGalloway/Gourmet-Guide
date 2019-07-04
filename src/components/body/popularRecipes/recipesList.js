@@ -29,11 +29,11 @@ class recipesList extends Component {
 
                     if(ingredient.includes('Ingredient') || ingredient.includes('Measure')){
 
-                        if(ingredient.includes('Ingredient') && responce[ingredient] !== ""){
+                        if(ingredient.includes('Ingredient') && responce[ingredient] !== "" && responce[ingredient] !== null){
                             
                             ingredients.push(responce[ingredient]);
                         }
-                        else if(ingredient.includes('Measure') && responce[ingredient] !== ""){
+                        else if(ingredient.includes('Measure') && responce[ingredient] !== "" && responce[ingredient] !== null){
                             
                             measurements.push(responce[ingredient]);
                         }

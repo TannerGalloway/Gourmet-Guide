@@ -8,17 +8,17 @@ class videos extends Component {
             <div className='videosContainer'>
                 <h4>Cooking Videos Gallery</h4>
                 <div className ='videos'>
-                    <Video/>
-                    <Video/>
-                    <Video/>
+                    <Video pageUse ={"videos"}/>
+                    <Video pageUse ={"videos"}/>
+                    <Video pageUse ={"videos"}/>
 
-                    <Video/>
-                    <Video/>
-                    <Video/>
+                    <Video pageUse ={"videos"}/>
+                    <Video pageUse ={"videos"}/>
+                    <Video pageUse ={"videos"}/>
 
-                    <Video/>
-                    <Video/>
-                    <Video/>
+                    <Video pageUse ={"videos"}/>
+                    <Video pageUse ={"videos"}/>
+                    <Video pageUse ={"videos"}/>
                 </div>
             </div>
         )

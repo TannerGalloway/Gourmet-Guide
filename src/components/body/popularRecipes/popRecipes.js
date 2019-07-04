@@ -4,7 +4,7 @@ import RecipesList from './recipesList';
 
  function popRecipes() {
     return (
-        <div className ='recipesContainer'>
+        <div className ='popRecipesContainer'>
             <RecipesList 
             name={JSON.parse(sessionStorage.getItem("PopularRecipe0")).name}
             img={JSON.parse(sessionStorage.getItem("PopularRecipe0")).img}

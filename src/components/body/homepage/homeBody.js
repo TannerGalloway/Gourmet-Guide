@@ -8,7 +8,7 @@ function homeBody() {
             <div className='body'>
                 <FoodCarousel/>
             </div>
-            <div className='footer'style={{marginTop: '75px'}}>
+            <div className='footer'style={{margin: '50px 0px 50px 0px'}}>
                 <BottomNavTabs/>
             </div>
         </React.Fragment>
