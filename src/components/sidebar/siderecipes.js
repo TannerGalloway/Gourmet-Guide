@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import moment from 'moment';
 import update from 'immutability-helper';
 import '../css/siderecipes.css';
 
@@ -43,11 +42,6 @@ class siderecipes extends Component {
     };
 
     
-    // componentDidMount()
-    // { 
-    //     this.timer();
-    // };
-    
     getmeals = (loadedmealState) =>{
         for( var i = 0; i < 3; i++)
         {
@@ -71,17 +65,6 @@ class siderecipes extends Component {
         }
         sessionStorage.setItem("popRecipesLoaded", true);
     };
-
-    // sets a timer so that the Popular Recipes will change daily. 
-    // timer(){
-    //     setInterval(() => { 
-    //         clearInterval(); 
-    //         if(moment().format('h:mm:ss a') === '12:00:00 pm')
-    //         {
-    //             this.getmeals("false");
-    //         }
-    //     }, 1000);
-    // };
     
     render() {
         return(

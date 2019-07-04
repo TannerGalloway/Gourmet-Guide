@@ -29,6 +29,7 @@ class pageTabs extends Component {
             currentDiv = document.getElementById('ContainerDiv');
             
             switch(this.props.use){
+                // load categories page
                 case 'categories':
                     responce = res.data.categories;
                     dataLength = responce.length;
@@ -61,6 +62,7 @@ class pageTabs extends Component {
 
                     }
                 break;
+                // filter when a cataegory was clicked
                 case 'filter':
                     responce = res.data.meals;
                     dataLength = responce.length;
@@ -88,6 +90,7 @@ class pageTabs extends Component {
                         currentDiv.appendChild(atag);
                     }
                 break;
+                // search page render
                 case 'search':
                     responce = res.data.meals;
                     if(responce === null)
@@ -101,7 +104,6 @@ class pageTabs extends Component {
                         textTag.appendChild(text);
                         subDiv.appendChild(textTag);
                         currentDiv.appendChild(subDiv);
-
                     }
                     else{
                         dataLength = responce.length;
@@ -110,7 +112,7 @@ class pageTabs extends Component {
                             this.setState({Title: responceId.strMeal, Img: responceId.strMealThumb});
 
                             atag = document.createElement("a");
-                            atag.setAttribute('href', '/recipes/' + this.state.Title.split(' ').join(''));
+                            atag.setAttribute('href', '/recipes/' + this.state.Title.split(' ').join('-'));
 
                             subDiv  = document.createElement("div");
                             subDiv.setAttribute('class', 'recipe');
