@@ -6,41 +6,34 @@ ul li{
 
 #topleft, #bottomleft{
     padding-right: 45px;
+    padding-bottom: 45px;
 };
 
  #bottomleft{
     margin-top: 45px;
 }
 
-#topleft, #topright{
+#topright, #bottomright{
+    padding-right: 5px;
     padding-bottom: 45px;
 }
 
-#topright, #bottomright{
-    padding-right: 5px;
-}
-
-a > img{
+li > img{
     position: relative;
     left: 3px;
 }
 
-h2{
+li > h2{
     font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
     font-size: 28px;
     text-align: center;
-}
-
-h2 > a{
-    font-weight: bold;
-    color: #27843d;  
-}
-
-a:hover{
-    text-decoration: none;
-    color: #27843d;  
-}
-h2{
     padding: 10px;
     margin-bottom: 0px;
+    color: #27843d;  
+}
+
+li > h2:hover{
+    text-decoration: none;
+    color: #8e0034;
 }

@@ -31,7 +31,7 @@ class body extends Component {
                                 <Route exact path="/results" component={SearchResults}/>
                             </div>
                             <div className='right' style={{float: 'right', width: '360px'}}>
-                                <Sidevideo title={'Cooking Video'}/>
+                                <Sidevideo title={'Cooking Video'} pageUse ={"side"}/>
                                 <Siderecipes/>
                                 <Sidefacts/>
                                 <Socialmedia/>

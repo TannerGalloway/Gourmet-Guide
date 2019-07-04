@@ -71,32 +71,35 @@ class siderecipes extends Component {
             <div className= 'sidepopular'>
                 <h4 style={{color: '#8e0034'}}> Popular Recipes</h4>
                 <div className='siderecipe1'>
-                    <a href='#'>
+                    <a href={'/recipes/' + this.state.popRecipes[0].name.split(' ').join('-')}>
                         <img src={this.state.popRecipes[0].img} alt={this.state.popRecipes[0].name}></img>
                     </a>
-                    <a className = 'sidetext' href='#'>
+                    <a className = 'sidetext' href={'/recipes/' + this.state.popRecipes[0].name.split(' ').join('-')}>
                         <h6>{this.state.popRecipes[0].name}</h6>
                         <p>{'A ' + this.state.popRecipes[0].area + ' dish'}</p>
                     </a>
             </div>
+            
             <div className='siderecipe2'>
-                <a href='#'>
+                <a href={'/recipes/' + this.state.popRecipes[1].name.split(' ').join('-')}>
                     <img src={this.state.popRecipes[1].img} alt={this.state.popRecipes[1].name}></img>
                 </a>
-                    <a className = 'sidetext' href='#'>
+                    <a className = 'sidetext' href={'/recipes/' + this.state.popRecipes[1].name.split(' ').join('-')}>
                         <h6>{this.state.popRecipes[1].name}</h6>
                         <p>{'A ' + this.state.popRecipes[1].area + ' dish'}</p>
                 </a>
             </div>
+
             <div className='siderecipe3'>
-                <a href='#'>
+                <a href={'/recipes/' + this.state.popRecipes[2].name.split(' ').join('-')}>
                     <img src={this.state.popRecipes[2].img} alt={this.state.popRecipes[2].name}></img>
                 </a>
-                <a className = 'sidetext' href='#'>
+                <a className = 'sidetext' href={'/recipes/' + this.state.popRecipes[2].name.split(' ').join('-')}>
                     <h6>{this.state.popRecipes[2].name}</h6>
                     <p>{'A ' + this.state.popRecipes[2].area + ' dish'}</p>
                 </a>
             </div>
+            
         </div>
         )
     }

@@ -63,10 +63,12 @@ class foodCarousel extends Component {
     render() {
             return (
                 <div className = 'mainImg'>
-                    <img 
-                        style={{width: '100%', height: '425px', borderStyle:'solid', borderColor: 'white'}} 
-                        src={this.state.meals[targetElementID].img} alt={this.state.meals[targetElementID].name}>
-                    </img>
+                    <a href={'/recipes/' + this.state.meals[targetElementID].name.split(' ').join('-')}>
+                        <img 
+                            style={{width: '100%', height: '425px', borderStyle:'solid', borderColor: 'white'}} 
+                            src={this.state.meals[targetElementID].img} alt={this.state.meals[targetElementID].name}>
+                        </img>
+                    </a>
                     <div className="flex-container" style={{display: 'inline-flex', position: 'relative', bottom: '8px' }}>
 
                         <Tabs 

@@ -71,7 +71,7 @@ class pageTabs extends Component {
                         this.setState({Title: responceId.strMeal, Img: responceId.strMealThumb});
 
                         atag = document.createElement("a");
-                        atag.setAttribute('href', '/meals/' + this.state.Title.split(' ').join(''));
+                        atag.setAttribute('href', '/recipes/' + this.state.Title.split(' ').join('-'));
 
                         subDiv  = document.createElement("div");
                         subDiv.setAttribute('class', 'recipe');

@@ -9,38 +9,30 @@ function bottomNavTabs() {
     return (
         <div className = 'navtabs'>
             <ul>
-                <li id = 'topleft'>
-                    <h2>
-                        <a href='/popularrecipes'>Popular Recipes</a>
-                    </h2>
-                    <a href='/popularrecipes'>
-                        <img src={featuredImg} alt={'Popular Recipes'}></img>
-                    </a>
-                </li>
-                <li id = 'topright'>
-                    <h2>
-                        <a href='/categories'>Recipe Categories</a>
-                    </h2>
-                    <a href='/categories'>
-                        <img src={categoriesImg} alt={'Recipe Categories'}></img>
-                    </a>
-                </li>
-                <li id = 'bottomleft'>
-                    <h2>
-                        <a href='/videos'>Videos</a>
-                    </h2>
-                    <a href='/videos'>
+                <a href='/popularrecipes'>
+                    <li id = 'topleft'>
+                        <h2>Popular Recipes</h2>
+                        <img src={featuredImg} alt={'Popular Recipes'}/>
+                    </li>
+                </a>
+                <a href='/categories'>
+                    <li id = 'topright'>
+                        <h2>Recipe Categories</h2>
+                        <img src={categoriesImg} alt={'Recipe Categories'}/>
+                    </li>
+                </a>
+                <a href='/videos'>
+                    <li id = 'bottomleft'>
+                        <h2>Videos</h2>
                         <img src={videosImg} alt={'Videos'}></img>
-                    </a>
-                </li>
-                <li id = 'bottomright'>
-                    <h2>
-                        <a href='/about'>About</a>
-                    </h2>
-                    <a href='/about'>
+                    </li>
+                </a>
+                <a href='/about'>
+                    <li id = 'bottomright'>
+                        <h2>About</h2>
                         <img src={aboutImg} alt={'About'}></img>
-                    </a>
-                </li>
+                    </li>
+                </a>
             </ul>
         </div>
     )

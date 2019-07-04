@@ -9,17 +9,21 @@ import '../css/sidevideo.css';
              mealName: '',
              mealLink: ''
          }
-
-         if(this.props.pageUse === "videos"){
+         if(this.props.pageUse === "side"){
+             this.getVideo("side");
+         }
+         else if(this.props.pageUse === "videos"){
             this.getVideo("videos");
          }
-          // set video in session storage for persistance across all pages.
-         else if(sessionStorage.getItem("CookingVideoLoaded") === null){
-            this.getVideo(null);
-        }
-        else if(sessionStorage.getItem("CookingVideoLoaded") === "true"){
-            this.getVideo("true");
-        }
+        //   // set video in session storage for persistance across all pages.
+        //  else if(sessionStorage.getItem("CookingVideoLoaded") === null){
+        //     // this.getVideo(null);
+        //     console.log('null');
+        // }
+        // else if(sessionStorage.getItem("CookingVideoLoaded") === "true"){
+        //     // this.getVideo("true");
+        //     console.log('false');
+        // }
      }
 
      // get youtube url and change url to embed url
@@ -30,21 +34,65 @@ import '../css/sidevideo.css';
             var videoID = videolink.substring(videolink.search('=') + 1, videolink.length);
             var videourl = videolink.substring(0, videolink.search('m') + 1);
 
-            if(loadedVideoState === "videos"){
-                this.setState({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID});
-            }
-            else if(loadedVideoState === null || loadedVideoState === "false"){
-                // set video in session storage
-                sessionStorage.setItem("CookingVideo", JSON.stringify({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID}));
+            switch(loadedVideoState){
+                case "videos":
+                    this.setState({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID});
+                    // console.log('videos');
+                break;
 
-                // set video in state from session storage
-                this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
+                case null:
+                        // console.log('null');
+                    // set video in session storage
+                    sessionStorage.setItem("CookingVideo", JSON.stringify({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID}));
+
+                    // set video in state from session storage
+                    this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
+
+                    sessionStorage.setItem("CookingVideoLoaded", true);
+                break;
+
+                case "true":
+                        // console.log('true');
+                    // set video in state from session storage
+                    this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
+                break;
+
+                case "side":
+                        // console.log('side');
+                    var sideDiv = document.getElementsByClassName('right');
+                    sideDiv[0].children[0].setAttribute("id", 'side');
+                    if(sessionStorage.getItem("CookingVideoLoaded") === null){
+                        this.getVideo(null);
+                    }
+                    else if(sessionStorage.getItem("CookingVideoLoaded") === "true"){
+                        this.getVideo("true");
+                    }
+                break;
+
+                default:
+                break;
             }
-            else if(loadedVideoState === "true"){
-                // set video in state from session storage
-                this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
-            }
-            sessionStorage.setItem("CookingVideoLoaded", true);
+
+            // if(loadedVideoState === "videos"){
+            //     this.setState({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID});
+            // }
+            // else if(loadedVideoState === null || loadedVideoState === "false"){
+            //     // set video in session storage
+            //     sessionStorage.setItem("CookingVideo", JSON.stringify({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID}));
+
+            //     // set video in state from session storage
+            //     this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
+            // }
+            // else if(loadedVideoState === "true"){
+            //     // set video in state from session storage
+            //     this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
+            // }
+            // sessionStorage.setItem("CookingVideoLoaded", true);
+
+            // if(this.props.pageUse === 'side'){
+            //     var sideDiv = document.getElementsByClassName('homeVideo');
+            //     sideDiv[0].setAttribute("id", 'side');
+            // }
         });
      }
      

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-var ingredients = [];
-var measurements = [];
-
 class recipesList extends Component {
 
     constructor(props){
@@ -13,14 +10,13 @@ class recipesList extends Component {
             ingredient: [],
             measurement:[]
         }
-
         this.getingredients();
     }
-     
+    
     // gets ingredients and measuresments and filters the response to only have ingredients and measuresments then sets state with array of ingredients and measuresments.
     getingredients(){
-            ingredients.length = 0;
-            measurements.length = 0;
+        var ingredients = [];
+        var measurements = [];
             var mealName = JSON.parse(sessionStorage.getItem("PopularRecipe" + this.props.recipeId)).name;
             axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=' + mealName).then(res => {
                 var responce = res.data.meals[0];
@@ -30,7 +26,6 @@ class recipesList extends Component {
                     if(ingredient.includes('Ingredient') || ingredient.includes('Measure')){
 
                         if(ingredient.includes('Ingredient') && responce[ingredient] !== "" && responce[ingredient] !== null){
-                            
                             ingredients.push(responce[ingredient]);
                         }
                         else if(ingredient.includes('Measure') && responce[ingredient] !== "" && responce[ingredient] !== null){
@@ -41,7 +36,6 @@ class recipesList extends Component {
                 }
                 this.setState(() => ({ingredient: ingredients, measurement: measurements}), this.textToScreen);
             })
-            
         }
 
         // creates p tags dynamicly according to how many ingredients and measuresments are needed to be displayed.
@@ -75,11 +69,11 @@ class recipesList extends Component {
         
     render() {
         return (
-            <a href = '#'>
+            <a href = {'/recipes/' + this.props.name.split(' ').join('-')}>
                 <div className={'popRecipe' + this.props.recipeId}>
-                    <div className='Heading'>
+                    <div className='popRecipeHeading'>
                         <h4>{this.props.name}</h4>
-                        <h4>Ingredients</h4>
+                        <h4 id={'Ingredient'}>Ingredients</h4>
                     </div>
                     <img src={this.props.img} alt= {this.props.name}/>
                 </div>

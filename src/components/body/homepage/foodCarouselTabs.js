@@ -6,7 +6,7 @@ class foodCarouselTabs extends Component {
         return (
             <div id={this.props.id} onClick={this.props.action} className={this.props.class}>
                 <div className='thumbnail' style={{display: 'inline'}}>
-                    <img src={this.props.img} alt={this.props.alt}></img>
+                    <img src={this.props.img} alt={this.props.alt}/>
                 </div>
                 <div className="text">
                     <p className={this.props.titleClass}>{this.props.title}</p>
