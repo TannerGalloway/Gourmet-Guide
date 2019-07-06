@@ -15,5 +15,6 @@
 }
 
 .sociallinks > a:hover{
+    text-decoration: none;
     color: #8e0034;
 }

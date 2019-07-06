@@ -24,6 +24,7 @@
 }
 
 a:hover .catagory > h4, a:hover .recipe > h4{
+    text-decoration: none;
     color: #8e0034;
 }
 

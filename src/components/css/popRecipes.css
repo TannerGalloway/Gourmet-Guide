@@ -8,12 +8,20 @@
     background: url('../images/bg-content.jpg');
     padding: 13px 36px;
     margin: 25px 0px;
-    
 }
+
+a:hover{
+    text-decoration: none;
+}
+
+.popRecipe0:hover > .popRecipeHeading, .popRecipe1:hover > .popRecipeHeading, .popRecipe2:hover > .popRecipeHeading{
+    color: #d1024e;
+}
+
 
 #Ingredient{
     position: relative;
-    right: 200px;
+    right: 250px;
     padding-left: 15px;
 }
 
@@ -31,7 +39,7 @@
 
 #ingredientsColLeft0, #ingredientsColLeft1, #ingredientsColLeft2, #ingredientsColRight0, #ingredientsColRight1, #ingredientsColRight2 {
     display: inline-block;
-    word-break: break-all;
+    word-break: break-word;
     margin-left: 20px; 
     color: #6c5b37;
     width: 30%;

@@ -12,6 +12,7 @@ import PopRecipes from './popularRecipes/popRecipes';
 import Categories from './categoriesPage/categoryPage';
 import MealDisplay from './mealDisplay/mealDisplay';
 import SearchResults from './searchResults/searchResults';
+import RecipePage from './recipePage/recipePage';
 
 class body extends Component {
     render() {
@@ -29,6 +30,7 @@ class body extends Component {
                                 <Route exact path="/categories" component={Categories}/>
                                 <Route exact path="/categories/:category" component={MealDisplay}/>
                                 <Route exact path="/results" component={SearchResults}/>
+                                <Route exact path="/recipes/:recipe" component={RecipePage}/>
                             </div>
                             <div className='right' style={{float: 'right', width: '360px'}}>
                                 <Sidevideo title={'Cooking Video'} pageUse ={"side"}/>

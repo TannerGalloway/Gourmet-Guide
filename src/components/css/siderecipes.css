@@ -5,7 +5,7 @@
 
 .siderecipe1 > a > img, .siderecipe2 > a > img, .siderecipe3 > a > img{
     width: 17%;
-    padding-bottom: 20px;
+    border: 3px solid white;
 }
 
 .sidetext{
@@ -14,9 +14,16 @@
     font-size: 16px;
     color: #6c5b37;
     padding-left: 10px;
+    padding-bottom: 10px;
     word-break: break-word;
 }
 
+.siderecipe1:hover > .sidetext, .siderecipe2:hover > .sidetext, .siderecipe3:hover > .sidetext{
+    text-decoration: none;
+    color: #8e0034;
+}
+
 .sidetext:hover {
+    text-decoration: none;
     color: #8e0034;
 }
