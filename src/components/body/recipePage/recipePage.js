@@ -89,7 +89,7 @@ class recipePage extends Component {
                     ingredientDiv.setAttribute("id", this.state.ingredient[i])
 
                 var ingredientLink = document.createElement("a");
-                    ingredientLink.setAttribute("href", "/ingredientresults");
+                    ingredientLink.setAttribute("href", "/ingredient-results");
 
                 var ingredientImg = document.createElement("img");
                     ingredientImg.setAttribute("src", "https://www.themealdb.com/images/ingredients/" + this.state.ingredient[i].split(' ').join("%20") + "-Small.png");

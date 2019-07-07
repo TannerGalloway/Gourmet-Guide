@@ -90,7 +90,7 @@ class pageTabs extends Component {
                         currentDiv.appendChild(atag);
                     }
                 break;
-                // search page render/ ingredient filter
+                // search page render/ingredient filter
                 case 'search':
                     responce = res.data.meals;
                     if(responce === null)

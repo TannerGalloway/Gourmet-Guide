@@ -15,7 +15,7 @@ import '../css/header.css';
     onSubmit = () =>{
         sessionStorage.setItem('searchTerm', this.state.query);
         this.setState({query: ''});
-        window.location.href = "/searchresults";
+        window.location.href = "/search-results";
     };
 
 

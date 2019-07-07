@@ -30,8 +30,8 @@ class body extends Component {
                                 <Route exact path="/popularrecipes" component={PopRecipes}/>
                                 <Route exact path="/categories" component={Categories}/>
                                 <Route exact path="/categories/:category" component={MealDisplay}/>
-                                <Route exact path="/searchresults" component={SearchResults}/>
-                                <Route exact path="/ingredientresults" component={IngredientFilter}/>
+                                <Route exact path="/search-results" component={SearchResults}/>
+                                <Route exact path="/ingredient-results" component={IngredientFilter}/>
                                 <Route exact path="/recipes/:recipe" component={RecipePage}/>
                             </div>
                             <div className='right' style={{float: 'right', width: '360px'}}>
