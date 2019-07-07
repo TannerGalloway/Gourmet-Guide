@@ -13,6 +13,7 @@ import Categories from './categoriesPage/categoryPage';
 import MealDisplay from './mealDisplay/mealDisplay';
 import SearchResults from './searchResults/searchResults';
 import RecipePage from './recipePage/recipePage';
+import IngredientFilter from './ingredientFilter/ingredientFilter';
 
 class body extends Component {
     render() {
@@ -29,7 +30,8 @@ class body extends Component {
                                 <Route exact path="/popularrecipes" component={PopRecipes}/>
                                 <Route exact path="/categories" component={Categories}/>
                                 <Route exact path="/categories/:category" component={MealDisplay}/>
-                                <Route exact path="/results" component={SearchResults}/>
+                                <Route exact path="/searchresults" component={SearchResults}/>
+                                <Route exact path="/ingredientresults" component={IngredientFilter}/>
                                 <Route exact path="/recipes/:recipe" component={RecipePage}/>
                             </div>
                             <div className='right' style={{float: 'right', width: '360px'}}>

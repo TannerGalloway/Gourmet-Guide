@@ -33,8 +33,8 @@ class pageTabs extends Component {
                 case 'categories':
                     responce = res.data.categories;
                     dataLength = responce.length;
-                    for(var i = 0; i < dataLength; i++){
-                        responceId = responce[i];
+                    for(var h = 0; h < dataLength; h++){
+                        responceId = responce[h];
                         this.setState({Title: responceId.strCategory, Img: responceId.strCategoryThumb});
 
                         mainDiv = document.createElement("div");
@@ -62,12 +62,12 @@ class pageTabs extends Component {
 
                     }
                 break;
-                // filter when a cataegory was clicked
+                // filter when a category was clicked
                 case 'filter':
                     responce = res.data.meals;
                     dataLength = responce.length;
-                    for(var j = 0; j < dataLength; j++){
-                        responceId = responce[j];
+                    for(var i = 0; i < dataLength; i++){
+                        responceId = responce[i];
                         this.setState({Title: responceId.strMeal, Img: responceId.strMealThumb});
 
                         atag = document.createElement("a");
@@ -90,7 +90,7 @@ class pageTabs extends Component {
                         currentDiv.appendChild(atag);
                     }
                 break;
-                // search page render
+                // search page render/ ingredient filter
                 case 'search':
                     responce = res.data.meals;
                     if(responce === null)
@@ -107,8 +107,8 @@ class pageTabs extends Component {
                     }
                     else{
                         dataLength = responce.length;
-                        for(var k = 0; k < dataLength; k++){
-                            responceId = responce[k];
+                        for(var j = 0; j < dataLength; j++){
+                            responceId = responce[j];
                             this.setState({Title: responceId.strMeal, Img: responceId.strMealThumb});
 
                             atag = document.createElement("a");
@@ -133,6 +133,7 @@ class pageTabs extends Component {
                     }
 
                 break;
+
                 default:
                         atag = document.createElement("a");
                         atag.setAttribute('href', '/');

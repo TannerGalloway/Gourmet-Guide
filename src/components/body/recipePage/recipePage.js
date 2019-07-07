@@ -71,22 +71,33 @@ class recipePage extends Component {
         })
     }
 
-    // gets images of ingredients that are stored in state array. and creates div, img and measuement with name of ingredient from state then appends the full div the ingredients container div.  
+    // gets images of ingredients that are stored in state array. and creates div, img and measuement with name of ingredient from state then appends the full div the ingredients container div.
+    // Checks to see if user clicked on ingredient to search for more recipes. 
     getingredientImgs(){
         var mainDiv = document.getElementsByClassName("ingredients");
+        document.addEventListener("click", function(event){
+            if(event.target.parentElement.parentElement.className === "ingredient"){
+                var ingredientClicked = event.target.id.split(' ').join("%20");
+                sessionStorage.setItem('searchTerm', ingredientClicked);
+            }
+           });
+
         for(var i = 0; i < this.state.ingredient.length; i++)
         {       
                 var ingredientDiv = document.createElement("div");
                     ingredientDiv.setAttribute("class", "ingredient");
+                    ingredientDiv.setAttribute("id", this.state.ingredient[i])
 
                 var ingredientLink = document.createElement("a");
-                    ingredientLink.setAttribute("href", "#");    
+                    ingredientLink.setAttribute("href", "/ingredientresults");
 
                 var ingredientImg = document.createElement("img");
                     ingredientImg.setAttribute("src", "https://www.themealdb.com/images/ingredients/" + this.state.ingredient[i].split(' ').join("%20") + "-Small.png");
-                    ingredientImg.setAttribute("alt", this.state.measurement[i] + this.state.ingredient[i]);
+                    ingredientImg.setAttribute("alt", this.state.measurement[i] + " " + this.state.ingredient[i]);
+                    ingredientImg.setAttribute("id", this.state.ingredient[i]);
 
                 var imgText = document.createElement("h6");
+                    imgText.setAttribute("id", this.state.ingredient[i]);
                 var imgTextContent = document.createTextNode(this.state.measurement[i] + " " + this.state.ingredient[i]);
 
                     imgText.appendChild(imgTextContent);
@@ -97,11 +108,12 @@ class recipePage extends Component {
         }
     }
 
+
     render() {
         return (
             <div className= 'recipesContainer'>
                 <div className= 'recipeHeading'>
-                    <h4 className= 'title'>{this.state.RecipeName}</h4>
+                    <h4 className= 'mealName'>{this.state.RecipeName}</h4>
                     <h4 className= 'Ingredient'>Ingredients</h4>
                 </div>
                 <div className= 'recipeContent'>
