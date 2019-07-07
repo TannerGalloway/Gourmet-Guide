@@ -18,12 +18,16 @@ a:hover{
     color: #d1024e;
 }
 
+.mealName{
+    width: 40%;
+}
 
-#Ingredient{
+.Ingredient{
     position: relative;
     right: 250px;
     padding-left: 15px;
 }
+
 
 .popRecipeHeading{
     display: flex;

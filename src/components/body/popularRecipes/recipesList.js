@@ -72,8 +72,8 @@ class recipesList extends Component {
             <a href = {'/recipes/' + this.props.name.split(' ').join('-')}>
                 <div className={'popRecipe' + this.props.recipeId}>
                     <div className='popRecipeHeading'>
-                        <h4>{this.props.name}</h4>
-                        <h4 id='Ingredient'>Ingredients</h4>
+                        <h4 className= 'mealName'>{this.props.name}</h4>
+                        <h4 className= 'Ingredient'>Ingredients</h4>
                     </div>
                     <img src={this.props.img} alt= {this.props.name}/>
                 </div>

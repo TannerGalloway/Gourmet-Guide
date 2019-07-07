@@ -15,15 +15,6 @@ import '../css/sidevideo.css';
          else if(this.props.pageUse === "videos"){
             this.getVideo("videos");
          }
-        //   // set video in session storage for persistance across all pages.
-        //  else if(sessionStorage.getItem("CookingVideoLoaded") === null){
-        //     // this.getVideo(null);
-        //     console.log('null');
-        // }
-        // else if(sessionStorage.getItem("CookingVideoLoaded") === "true"){
-        //     // this.getVideo("true");
-        //     console.log('false');
-        // }
      }
 
      // get youtube url and change url to embed url
@@ -37,11 +28,9 @@ import '../css/sidevideo.css';
             switch(loadedVideoState){
                 case "videos":
                     this.setState({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID});
-                    // console.log('videos');
                 break;
 
                 case null:
-                        // console.log('null');
                     // set video in session storage
                     sessionStorage.setItem("CookingVideo", JSON.stringify({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID}));
 
@@ -52,13 +41,11 @@ import '../css/sidevideo.css';
                 break;
 
                 case "true":
-                        // console.log('true');
                     // set video in state from session storage
                     this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
                 break;
 
                 case "side":
-                        // console.log('side');
                     var sideDiv = document.getElementsByClassName('right');
                     sideDiv[0].children[0].setAttribute("id", 'side');
                     if(sessionStorage.getItem("CookingVideoLoaded") === null){
@@ -72,27 +59,6 @@ import '../css/sidevideo.css';
                 default:
                 break;
             }
-
-            // if(loadedVideoState === "videos"){
-            //     this.setState({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID});
-            // }
-            // else if(loadedVideoState === null || loadedVideoState === "false"){
-            //     // set video in session storage
-            //     sessionStorage.setItem("CookingVideo", JSON.stringify({mealName: responce.strMeal, mealLink: videourl + '/embed/' + videoID}));
-
-            //     // set video in state from session storage
-            //     this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
-            // }
-            // else if(loadedVideoState === "true"){
-            //     // set video in state from session storage
-            //     this.setState({mealName: JSON.parse(sessionStorage.getItem("CookingVideo")).mealName, mealLink: JSON.parse(sessionStorage.getItem("CookingVideo")).mealLink});
-            // }
-            // sessionStorage.setItem("CookingVideoLoaded", true);
-
-            // if(this.props.pageUse === 'side'){
-            //     var sideDiv = document.getElementsByClassName('homeVideo');
-            //     sideDiv[0].setAttribute("id", 'side');
-            // }
         });
      }
      
@@ -102,7 +68,7 @@ import '../css/sidevideo.css';
                 <h4 style={{color: '#8e0034'}}>{this.props.title}</h4>
                 <iframe title={this.state.mealName} id="player" type="text/html" width="200" height="175"
                 src={this.state.mealLink}
-                frameBorder="0"></iframe>
+                frameBorder="0"/>
                 <h4>{this.state.mealName}</h4>
             </div>
         )
