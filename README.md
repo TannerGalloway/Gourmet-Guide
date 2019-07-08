@@ -1,4 +1,4 @@
-![Food & Recipes](src\components\images\logo.png)
+![Food & Recipes](src/components/images/logo.png)
 
 Ever wanted to find or cook different foods from around the world while staying in the comfort of your own home? <br />
 <br />
