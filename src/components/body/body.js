@@ -7,7 +7,7 @@ import Sidefacts from '../sidebar/sidefacts';
 import Socialmedia from '../sidebar/socialmedia';
 import Home from './homepage/homeBody';
 import About from './about/aboutpage';
-import Videos from './videosPage/videos.js';
+import Videos from './videosPage/videos';
 import PopRecipes from './popularRecipes/popRecipes';
 import Categories from './categoriesPage/categoryPage';
 import MealDisplay from './mealDisplay/mealDisplay';
