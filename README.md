@@ -8,5 +8,5 @@ When you find a dish that interests you click on it and get a bunch of info on y
 <br/>
 If there is an Ingredient that you like feel free to click on it and you will get a list of other recipes that also use that specified ingredient. 
 
-Visit this webpage by clicking the link below
+Visit this webpage by clicking the link below <br />
 https://worldwide-cooking.herokuapp.com/
