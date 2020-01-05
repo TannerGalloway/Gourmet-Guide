@@ -4,6 +4,7 @@ import Tabs from './foodCarouselTabs';
 import update from 'immutability-helper';
 
 var targetElementID = 0;
+var tabClickActive = true;
 class foodCarousel extends Component {
     constructor(props){
         super(props);
@@ -51,13 +52,20 @@ class foodCarousel extends Component {
 
     // click on tabs homepage
     tabClickHandle = (event) =>{
-        // gets id of tab clicked
-        event.target.parentElement.className === 'text' || event.target.parentElement.className === 'thumbnail' ? targetElementID = event.target.parentElement.parentElement.id: targetElementID = event.target.parentElement.id;
+
+        if(tabClickActive){
+            tabClickActive = false;
+
+            // gets id of tab clicked
+            event.target.parentElement.className === 'text' || event.target.parentElement.className === 'thumbnail' ? targetElementID = event.target.parentElement.parentElement.id: targetElementID = event.target.parentElement.id;
         
-        // sets active state for tab clicked
-        this.setState((prevState) => ({
-            meals: prevState.meals.map(mealObjFalse => (mealObjFalse.active === true) ? {...mealObjFalse, active: false} : mealObjFalse),
-        }), () => this.setState((prevState) => ({meals: prevState.meals.map((mealObjTrue => (mealObjTrue.id === targetElementID) ? {...mealObjTrue, active: true}: mealObjTrue),)})));
+            // sets active state for tab clicked
+            this.setState((prevState) => ({
+                meals: prevState.meals.map(mealObjFalse => (mealObjFalse.active === true) ? {...mealObjFalse, active: false} : mealObjFalse),
+            }), () => this.setState((prevState) => ({meals: prevState.meals.map((mealObjTrue => (mealObjTrue.id === targetElementID) ? {...mealObjTrue, active: true}: mealObjTrue),)})));
+
+            setTimeout(() => tabClickActive = true, 1000);
+        }
     };
 
     render() {
@@ -71,7 +79,8 @@ class foodCarousel extends Component {
                     </a>
                     <div className="flex-container" style={{display: 'inline-flex', position: 'relative', bottom: '8px' }}>
 
-                        <Tabs 
+                        <Tabs
+                            // style={this.displayStyle} 
                             action={this.tabClickHandle} 
                             id={0}
                             class={this.state.meals[0].active ? 'Tab1Active' : 'tab1'} 
