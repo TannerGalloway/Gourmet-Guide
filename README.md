@@ -9,4 +9,4 @@ When you find a dish that interests you click on it and get a bunch of info on y
 If there is an Ingredient that you like feel free to click on it and you will get a list of other recipes that also use that specified ingredient.
 
 Visit this webpage by clicking the link below <br />
-[https://food-recipes-c6mb.onrender.com/](https://gourmet-guide-zpn6.onrender.com)
+https://gourmet-guide-zpn6.onrender.com
