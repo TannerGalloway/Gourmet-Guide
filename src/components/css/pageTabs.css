@@ -1,37 +1,47 @@
-#ContainerDiv{
-    background-image: url('../images/bg-content.jpg');
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-radius: 0px 0px 10px 10px;
-    padding: 13px 30px 0px 30px;
-    margin-bottom: 36px;
+#ContainerDiv {
+  background-image: url("../images/bg-content.jpg");
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 13px 30px 0px 30px;
+  margin-bottom: 36px;
 }
 
-#ContainerDiv > a{
-    width: 30%;
+#ContainerDiv > a {
+  width: 30%;
 }
 
-.recipe > img{
-    width: 100%;
+.recipeTitle {
+  font-size: 20px;
+  text-align: center;
+  color: #8e0034;
+  margin-bottom: 30px;
 }
 
-.catagory > h4, .recipe > h4{
-    font-size: 20px;
-    text-align: center;
-    color: #6c5b37;
-    margin-bottom: 30px;
+.recipe > img {
+  width: 100%;
+  border: white solid, 5px;
 }
 
-a:hover .catagory > h4, a:hover .recipe > h4{
-    text-decoration: none;
-    color: #8e0034;
+.catagory > h4,
+.recipe > h4 {
+  font-size: 20px;
+  text-align: center;
+  color: #6c5b37;
+  margin-bottom: 30px;
 }
 
-.error{
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
-    color: #8e0034;
-    position: relative;
-    left: 200px;
+a:hover .catagory > h4,
+a:hover .recipe > h4 {
+  text-decoration: none;
+  color: #8e0034;
+}
+
+.error {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #8e0034;
+  position: relative;
+  left: 200px;
 }

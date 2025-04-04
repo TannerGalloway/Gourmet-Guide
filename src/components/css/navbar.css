@@ -1,25 +1,28 @@
-.navbar{
-    border-radius: 25px 25px 0px 0px;
+.navbar {
+  border-radius: 25px 25px 0px 0px;
 }
 
-.nav-link{
-    padding: 0.2rem 1.9rem !important;
-    color: #fffcdf !important;
-    text-shadow: 1px 1px 1px #81725c !important;
+.nav-link {
+  padding: 0.2rem 1.9rem;
+  color: #fffcdf;
+  text-shadow: 1px 1px 1px #81725c;
 }
 
-.nav-link:hover{
-    background: #81725c;
-    border-radius: 25px;
+.navbar-nav {
+  padding: 1rem;
 }
 
-.bg-dark{
-    background-color: #A99D8C !important;
+.nav-link:hover {
+  background: #81725c;
+  border-radius: 25px;
+}
+
+.bg-dark {
+  background-color: #a99d8c;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .navbar{
-        width: 120%;    
-    }
-    
+  .navbar {
+    width: 120%;
   }
+}

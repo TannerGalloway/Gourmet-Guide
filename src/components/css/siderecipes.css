@@ -1,29 +1,39 @@
-.sidepopular{
-    display: inline-block;
-    margin-bottom: 25px;
+.sidepopular {
+  display: inline-block;
+  margin-bottom: 25px;
 }
 
-.siderecipe1 > a > img, .siderecipe2 > a > img, .siderecipe3 > a > img{
-    width: 17%;
-    border: 3px solid white;
+.siderecipe1 > a > img,
+.siderecipe2 > a > img,
+.siderecipe3 > a > img {
+  width: 30%;
+  border: 3px solid white;
 }
 
-.sidetext{
-    display: inline-block;
-    width: 80%;
-    font-size: 16px;
-    color: #6c5b37;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    word-break: break-word;
+.sidetext {
+  display: inline-block;
+  width: 80%;
+  font-size: 25px;
+  color: #6c5b37;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  word-break: break-word;
 }
 
-.siderecipe1:hover > .sidetext, .siderecipe2:hover > .sidetext, .siderecipe3:hover > .sidetext{
-    text-decoration: none;
-    color: #8e0034;
+.foodDescription {
+  font-size: 19px;
+  margin: 10px 0px;
+  color: #6c5b37;
 }
 
-.sidetext:hover {
-    text-decoration: none;
-    color: #8e0034;
+.siderecipe1:hover > .sidetext,
+.siderecipe2:hover > .sidetext,
+.siderecipe3:hover > .sidetext {
+  text-decoration: none;
+  color: #8e0034;
+}
+
+.foodDescription:hover {
+  text-decoration: none;
+  color: #8e0034;
 }

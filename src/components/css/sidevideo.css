@@ -1,24 +1,33 @@
-.videosContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.videosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.homeVideo{
-    display: inline-block;
-    margin-bottom: 25px;
-    width: 32%;
+.homeVideo {
+  display: inline-block;
+  margin-bottom: 25px;
+  width: 32%;
 }
 
-.homeVideo > h4{
-    word-break: break-word; 
-    font-family: "Times New Roman", Times, serif;
-    color: #6c5b37;
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 16px;
+.videoFoodName {
+  word-break: break-word;
+  font-family: "Times New Roman", Times, serif;
+  color: #6c5b37;
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 16px;
 }
 
-#side{
-    width: 55%;
+.homeVideo > h4 {
+  word-break: break-word;
+  font-family: "Times New Roman", Times, serif;
+  color: #6c5b37;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+#side {
+  width: 55%;
 }

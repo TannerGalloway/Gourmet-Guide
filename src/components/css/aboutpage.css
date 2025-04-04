@@ -1,18 +1,20 @@
-.about{
-    background: url(../images/bg-content.jpg);
-    border-radius: 0px 0px 10px 10px;
+.about {
+  background: url(../images/bg-content.jpg);
+  border-radius: 0px 0px 10px 10px;
 }
 
-.aboutcontent{
-    padding: 13px 36px 36px;
-    font-family: "Times New Roman", Times, serif;
-    color: #8e0034;
+.aboutcontent {
+  padding: 13px 36px 36px;
+  font-family: "Times New Roman", Times, serif;
+  color: #8e0034;
 }
 
-.aboutcontent > h4{
-    font-weight: bold;
+.aboutcontent > h4 {
+  font-weight: bold;
+  font-size: 25px;
 }
 
-.aboutcontent > p{
-    color: #6c5b37;
+.aboutcontent > p {
+  color: #6c5b37;
+  text-align: left;
 }

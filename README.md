@@ -6,7 +6,7 @@ While you're in the right place, this website allows you to discover new meals y
 <br />
 When you find a dish that interests you click on it and get a bunch of info on your selected dish, such as detailed cooking instructions and list of ingredients. High Defintion photos and videos will also aid you while you cook. <br/>
 <br/>
-If there is an Ingredient that you like feel free to click on it and you will get a list of other recipes that also use that specified ingredient. 
+If there is an Ingredient that you like feel free to click on it and you will get a list of other recipes that also use that specified ingredient.
 
 Visit this webpage by clicking the link below <br />
 https://worldwide-cooking.herokuapp.com/

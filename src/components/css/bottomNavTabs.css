@@ -1,39 +1,51 @@
-ul li{
-    background: url(../images/navtabs-frame.png) no-repeat;
-    display: inline-block;
-    list-style: none;
+.tab {
+  background: url(../images/navtabs-frame.png) no-repeat;
+  display: inline-block;
+  list-style: none;
+  margin: 12px;
 }
 
-#topleft, #bottomleft{
-    padding-right: 45px;
-    padding-bottom: 45px;
-};
-
- #bottomleft{
-    margin-top: 45px;
+.tab:hover {
+  text-decoration: none;
+  color: #8e0034;
 }
 
-#topright, #bottomright{
-    padding-right: 5px;
-    padding-bottom: 45px;
+.tabHeader {
+  margin: 0px;
 }
 
-li > img{
-    position: relative;
-    left: 3px;
+#topleft,
+#bottomleft {
+  padding-right: 45px;
+  padding-bottom: 45px;
 }
 
-li > h2{
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
-    font-size: 28px;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 0px;
-    color: #27843d;  
+#bottomleft {
+  margin-top: 45px;
 }
 
-li > h2:hover{
-    text-decoration: none;
-    color: #8e0034;
+#topright,
+#bottomright {
+  padding-right: 5px;
+  padding-bottom: 45px;
+}
+
+li > img {
+  position: relative;
+  left: 3px;
+}
+
+li > h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 0px;
+  color: #27843d;
+}
+
+li > h2:hover {
+  text-decoration: none;
+  color: #8e0034;
 }

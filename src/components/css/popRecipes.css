@@ -1,50 +1,57 @@
-.popRecipesContainer{
-    background: rgb(221, 214, 205);
-    border-radius: 0px 0px 10px 10px;
-    padding: 13px 0px 1px;
+.popRecipesContainer {
+  background: rgb(221, 214, 205);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 13px;
 }
 
-.popRecipe0, .popRecipe1, .popRecipe2 {
-    background: url('../images/bg-content.jpg');
-    padding: 13px 36px;
-    margin: 25px 0px;
+.popRecipe0,
+.popRecipe1,
+.popRecipe2 {
+  background: url("../images/bg-content.jpg");
+  padding: 13px 36px;
+  margin: 25px 0px;
 }
 
-a:hover{
-    text-decoration: none;
+a:hover {
+  text-decoration: none;
 }
 
-.popRecipe0:hover > .popRecipeHeading, .popRecipe1:hover > .popRecipeHeading, .popRecipe2:hover > .popRecipeHeading{
-    color: #d1024e;
+.popRecipe0:hover > .popRecipeHeading,
+.popRecipe1:hover > .popRecipeHeading,
+.popRecipe2:hover > .popRecipeHeading {
+  color: #d1024e;
 }
 
-.mealName{
-    width: 40%;
+.Ingredient {
+  position: relative;
+  right: 250px;
+  padding-left: 15px;
 }
 
-.Ingredient{
-    position: relative;
-    right: 250px;
-    padding-left: 15px;
+.popRecipeHeading {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  color: #8e0034;
+  justify-content: space-between;
 }
 
-
-.popRecipeHeading{
-    display: flex;
-    font-family: "Times New Roman", Times, serif;
-    color: #8e0034;
-    justify-content: space-between;
-} 
-
-.popRecipe0 > img, .popRecipe1 > img, .popRecipe2 > img{
-    width: 30%;
-    border: 3px solid white;
+.popRecipe0 > img,
+.popRecipe1 > img,
+.popRecipe2 > img {
+  width: 30%;
+  border: 3px solid white;
 }
 
-#ingredientsColLeft0, #ingredientsColLeft1, #ingredientsColLeft2, #ingredientsColRight0, #ingredientsColRight1, #ingredientsColRight2 {
-    display: inline-block;
-    word-break: break-word;
-    margin-left: 20px; 
-    color: #6c5b37;
-    width: 30%;
+#ingredientsColLeft0,
+#ingredientsColLeft1,
+#ingredientsColLeft2,
+#ingredientsColRight0,
+#ingredientsColRight1,
+#ingredientsColRight2 {
+  display: inline-block;
+  word-break: break-word;
+  margin-left: 20px;
+  color: #6c5b37;
+  width: 30%;
 }
