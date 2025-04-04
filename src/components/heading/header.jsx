@@ -7,7 +7,7 @@ function Header() {
     <div className="heading">
       <Row>
         <Col>
-          <h1>Food &amp; Recipes</h1>
+          <h1>Gourmet Guide</h1>
         </Col>
       </Row>
     </div>
